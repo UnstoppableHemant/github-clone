@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="overlay"></div>
+    <div class="container-fluid my-3 d-flex">
+        <div class="d-flex gap-2 align-items-center">
+            <img style="width: 50px;" src="https://github.com/fluidicon.png" alt="logo" />
+            <h5>GitHub Clone</h5>
+        </div>
+        <div class="input-group ms-auto" style="width:50%;">
+            <input type="text" value="johnpapa" class="form-control" id="Username" placeholder="Enter Username"
+                aria-label="Username" aria-describedby="searchBtn">
+            <button class="input-group-text" id="searchBtn"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row px-2">
+            <div class="col-md-4 col-12" id="renderUserProfile">
+            </div>
+            <div class="col-md-8 col-12 mb-2">
+                <div class="row p-3" id="renderRepos"></div>
+                <div class="px-3 d-flex justify-content-between">
+                    <div class="pagination" id="paginationBox">
+                        <button class="btn btn-secondary" onclick="prevPage();" id="pre" disabled="disabled"><i
+                                class="fa fa-angle-left"></i></button>
+                        <input type="number" class="form-contol border-0 text-center" value="1" id="pageNumber"
+                            disabled />
+                        <button class="btn btn-secondary" onclick="nextPage();" id="nxt"><i
+                                class="fa fa-angle-right"></i></button>
+                    </div>
+                    <div class="d-flex gap-3 itemsPerPage form-label align-items-center justify-content-end">
+                        <label class="">Items Per Page </label>
+                        <select class="form-select" id="rowsPerPage" style="width: 100px;"
+                            onchange="setItemsPerPage();">
+                            <option value="10" selected>10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
